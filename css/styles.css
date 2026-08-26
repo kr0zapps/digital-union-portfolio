@@ -527,6 +527,41 @@ h1, h2, h3, h4, .font-display {
 
 /* RESPONSIVE FIXES */
 @media (max-width: 767px) {
+  /* Extra mobile grid fixes */
+  .process-step {
+    padding: 3rem 1.5rem;
+    border-right: none !important;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .stat-box {
+    padding: 3rem 0.5rem;
+    border-right: 1px solid var(--border-light);
+  }
+  
+  .stat-box:nth-child(even) {
+    border-right: none;
+  }
+  
+  .stat-box:nth-child(1), .stat-box:nth-child(2) {
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  
+  .step-title {
+    font-size: 1.25rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
   .wa-badge { bottom: 90px; right: 20px; }
 
   .nav-header {
