@@ -524,3 +524,48 @@ h1, h2, h3, h4, .font-display {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* RESPONSIVE FIXES */
+@media (max-width: 767px) {
+  .nav-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+    hyphens: none;
+    word-break: normal;
+  }
+  
+  .hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .hero-footer > div:last-child {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1.25rem 2rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
