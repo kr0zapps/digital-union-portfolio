@@ -2,19 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
 
 :root {
-  --bg-dark: #09080C;
-  --bg-panel: #121017;
+  --bg-navy: #0F172A;
+  --bg-purple: #7C3AED;
+  --bg-panel: rgba(15, 23, 42, 0.6);
   --text-main: #E5E5E7;
-  --text-muted: #8A8893;
-  --accent: #00BFFF;
-  --border-light: rgba(255, 255, 255, 0.08);
+  --text-muted: #CBD5E1;
+  --accent: #00A1F1;
+  --border-light: rgba(255, 255, 255, 0.15);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-dark);
+  background: linear-gradient(to bottom right, var(--bg-navy), var(--bg-purple));
+  background-attachment: fixed;
   color: var(--text-main);
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
@@ -132,7 +134,7 @@ h1, h2, h3, h4, .font-display {
   align-items: center;
   gap: 1rem;
   background: var(--text-main);
-  color: var(--bg-dark);
+  color: var(--bg-navy);
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -154,7 +156,7 @@ h1, h2, h3, h4, .font-display {
 .cta-btn.secondary:hover {
   border-color: var(--text-main);
   background: var(--text-main);
-  color: var(--bg-dark);
+  color: var(--bg-navy);
 }
 
 /* MARQUEE */
@@ -258,7 +260,7 @@ h1, h2, h3, h4, .font-display {
   padding: 4rem 3rem;
   border-bottom: 1px solid var(--border-light);
   border-right: 1px solid var(--border-light);
-  background: var(--bg-dark);
+  background: transparent;
   transition: background 0.4s ease;
 }
 .process-step:nth-child(even) { border-right: none; }
