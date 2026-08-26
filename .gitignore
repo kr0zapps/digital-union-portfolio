@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+*.py
+input.css
+tailwind.config.js
+package.json
+package-lock.json

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Union — Tu Solución Digital</title>
+  <meta name="description" content="Digital Union: Agencia élite de desarrollo web, diseño UX/UI y soluciones digitales de alto rendimiento. Transformamos ideas en productos digitales que generan resultados." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-black":   "#000000",
+            "brand-white":   "#FFFFFF",
+            "brand-purple":  "#7C3AED",
+            "brand-celeste": "#00A1F1",
+            "brand-navy":    "#0F172A",
+            "brand-dark":    "#080B16",
+            "brand-gray":    "#94A3B8",
+          },
+          fontFamily: {
+            display: ["Syne", "sans-serif"],
+            body:    ["Hanken Grotesk", "sans-serif"],
+          },
+          maxWidth: {
+            container: "1280px",
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="bg-brand-dark text-brand-white font-body antialiased">
+
+<!-- ============================================ -->
+<!-- NAVBAR                                       -->
+<!-- ============================================ -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent border-b border-white/0 transition-all duration-300">
+  <div class="max-w-container mx-auto flex items-center justify-between px-6 md:px-12 py-4">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 group">
+      <span class="material-symbols-outlined text-brand-celeste text-3xl group-hover:rotate-90 transition-transform duration-500">hub</span>
+      <span class="font-display font-bold text-xl md:text-2xl tracking-tight">
+        DIGITAL<span class="text-brand-celeste">UNION</span>
+      </span>
+    </a>
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#servicios"  class="nav-link text-sm font-medium text-brand-white/70 hover:text-brand-celeste transition-colors">Servicios</a>
+      <a href="#portafolio" class="nav-link text-sm font-medium text-brand-white/70 hover:text-brand-celeste transition-colors">Portafolio</a>
+      <a href="#proceso"    class="nav-link text-sm font-medium text-brand-white/70 hover:text-brand-celeste transition-colors">Proceso</a>
+      <a href="#equipo"     class="nav-link text-sm font-medium text-brand-white/70 hover:text-brand-celeste transition-colors">Equipo</a>
+      <a href="#faq"        class="nav-link text-sm font-medium text-brand-white/70 hover:text-brand-celeste transition-colors">FAQ</a>
+      <a href="#contacto"   class="bg-brand-celeste hover:bg-brand-celeste/90 text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition-colors">Contáctanos</a>
+    </div>
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="lg:hidden text-brand-white">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-brand-navy/95 backdrop-blur-xl z-[60] flex flex-col p-8 pt-20 gap-6 border-l border-white/10">
+  <button id="close-menu-btn" class="absolute top-6 right-6 text-brand-white">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <a href="#servicios"  class="text-lg font-semibold hover:text-brand-celeste transition-colors">Servicios</a>
+  <a href="#portafolio" class="text-lg font-semibold hover:text-brand-celeste transition-colors">Portafolio</a>
+  <a href="#proceso"    class="text-lg font-semibold hover:text-brand-celeste transition-colors">Proceso</a>
+  <a href="#equipo"     class="text-lg font-semibold hover:text-brand-celeste transition-colors">Equipo</a>
+  <a href="#faq"        class="text-lg font-semibold hover:text-brand-celeste transition-colors">FAQ</a>
+  <a href="#contacto"   class="mt-4 bg-brand-celeste text-white text-center font-semibold py-3 rounded-lg">Contáctanos</a>
+</div>
+
+
+<!-- ============================================ -->
+<!-- SECTION 1: HERO                              -->
+<!-- ============================================ -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+  <!-- Background Orbs -->
+  <div class="orb orb-purple w-[500px] h-[500px] -top-40 -left-40"></div>
+  <div class="orb orb-celeste w-[400px] h-[400px] bottom-20 right-0"></div>
+
+  <div class="max-w-container mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <!-- Left: Copy -->
+    <div class="z-10">
+      <div class="flex items-center gap-2 mb-6">
+        <div class="pulse-dot"></div>
+        <span class="text-sm font-semibold text-green-400 uppercase tracking-widest">Disponibles para proyectos</span>
+      </div>
+      <h1 class="hero-title font-display font-extrabold text-5xl md:text-7xl lg:text-[80px] leading-[1.05] mb-6">
+        TU SOLUCIÓN<br/>
+        <span class="gradient-text">DIGITAL</span>
+      </h1>
+      <p class="text-lg md:text-xl text-brand-white/70 max-w-xl mb-10 leading-relaxed">
+        Operamos con los más altos estándares del mercado. Transformamos la visión de tu empresa en productos digitales de clase mundial que generan resultados medibles.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contacto" class="bg-brand-celeste hover:bg-brand-celeste/90 text-white font-bold px-8 py-4 rounded-lg flex items-center gap-2 transition-all hover:shadow-lg hover:shadow-brand-celeste/25">
+          CONTÁCTANOS
+          <span class="material-symbols-outlined text-xl">arrow_forward</span>
+        </a>
+        <a href="#portafolio" class="border-2 border-brand-white/20 hover:border-brand-white/50 text-brand-white font-bold px-8 py-4 rounded-lg flex items-center gap-2 transition-all">
+          VER PROYECTOS
+          <span class="material-symbols-outlined text-xl">visibility</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Animated Terminal -->
+    <div class="z-10 hidden lg:block">
+      <div class="glass-card rounded-xl overflow-hidden glow-purple">
+        <!-- Terminal Header -->
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-3 text-xs text-brand-white/40 font-mono">digital-union — zsh</span>
+        </div>
+        <!-- Terminal Body -->
+        <div class="p-6 font-mono text-sm leading-loose">
+          <div><span class="text-brand-celeste">~</span> <span class="text-green-400">$</span> <span class="terminal-line" data-text="npx create-next-app@latest client-project"></span></div>
+          <div class="mt-2"><span class="text-brand-celeste">~</span> <span class="text-green-400">$</span> <span class="terminal-line" data-text="Configurando arquitectura premium..."></span></div>
+          <div class="mt-2"><span class="text-brand-celeste">~</span> <span class="text-green-400">$</span> <span class="terminal-line" data-text="✓ TypeScript · Tailwind · Prisma · Auth"></span></div>
+          <div class="mt-2"><span class="text-brand-celeste">~</span> <span class="text-green-400">$</span> <span class="terminal-line" data-text="✓ Deploy en Vercel → proyecto-live.com"></span></div>
+          <div class="mt-2"><span class="text-brand-celeste">~</span> <span class="text-green-400">$</span> <span class="terminal-line" data-text="🚀 Rendimiento: 98/100 Lighthouse"></span></div>
+          <div class="mt-4"><span class="terminal-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 2: LOGOS DE CLIENTES                 -->
+<!-- ============================================ -->
+<section class="py-16 border-y border-white/5 overflow-hidden">
+  <div class="max-w-container mx-auto px-6 md:px-12 mb-8">
+    <p class="text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-white/40">Confían en nosotros</p>
+  </div>
+  <div class="relative overflow-hidden">
+    <div class="marquee-track">
+      <!-- Duplicated for infinite scroll -->
+      <div class="flex items-center gap-16 px-8 shrink-0">
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">TECHCORP</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">INNOVA GROUP</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">NEXUS LABS</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">VERTEX DIGITAL</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">ANDES FINTECH</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">GLOBALNET</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">STARTLAB</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">CODEFLOW</span>
+      </div>
+      <div class="flex items-center gap-16 px-8 shrink-0">
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">TECHCORP</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">INNOVA GROUP</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">NEXUS LABS</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">VERTEX DIGITAL</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">ANDES FINTECH</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">GLOBALNET</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">STARTLAB</span>
+        <span class="text-2xl font-display font-bold text-brand-white/20 whitespace-nowrap">CODEFLOW</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 3: SERVICIOS                         -->
+<!-- ============================================ -->
+<section id="servicios" class="py-24 md:py-32 relative">
+  <div class="orb orb-purple w-[300px] h-[300px] top-0 right-0"></div>
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Lo que hacemos</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Nuestros Servicios</h2>
+      <p class="text-brand-white/60 mt-4 max-w-2xl mx-auto text-lg">Soluciones integrales para cada etapa de tu transformación digital. Desde la idea hasta el lanzamiento y más allá.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+      <!-- Service 1 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-brand-celeste/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-brand-celeste text-3xl">code</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">Desarrollo Web</h3>
+        <p class="text-brand-white/60 leading-relaxed">Sitios y aplicaciones web de alto rendimiento con las tecnologías más modernas del mercado. Rápidos, seguros y escalables.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">React</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Next.js</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Node.js</span>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-brand-purple/20 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-brand-purple text-3xl">palette</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">Diseño UX/UI</h3>
+        <p class="text-brand-white/60 leading-relaxed">Interfaces intuitivas y visualmente impactantes. Diseñamos experiencias que convierten visitantes en clientes fieles.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Figma</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Prototyping</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Design System</span>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-green-500/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-green-400 text-3xl">shopping_cart</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">E-Commerce</h3>
+        <p class="text-brand-white/60 leading-relaxed">Tiendas online optimizadas para vender. Integración de pagos, inventario y logística con plataformas líderes.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Shopify</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">WooCommerce</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Stripe</span>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-orange-400 text-3xl">phone_iphone</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">Apps Móviles</h3>
+        <p class="text-brand-white/60 leading-relaxed">Aplicaciones nativas y multiplataforma que tus usuarios van a amar. Performance nativa en iOS y Android.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">React Native</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Flutter</span>
+        </div>
+      </div>
+      <!-- Service 5 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-brand-celeste/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-brand-celeste text-3xl">support_agent</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">Mantenimiento & Soporte</h3>
+        <p class="text-brand-white/60 leading-relaxed">Monitoreo 24/7, actualizaciones de seguridad y soporte técnico premium. Tu proyecto siempre en las mejores manos.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">DevOps</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">CI/CD</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">AWS</span>
+        </div>
+      </div>
+      <!-- Service 6 -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal">
+        <div class="w-14 h-14 rounded-lg bg-pink-500/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-pink-400 text-3xl">trending_up</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3">SEO & Marketing Digital</h3>
+        <p class="text-brand-white/60 leading-relaxed">Posicionamiento orgánico y estrategias de crecimiento que llevan tu marca al primer lugar de resultados.</p>
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Google Ads</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">Analytics</span>
+          <span class="text-xs px-3 py-1 rounded-full bg-brand-white/5 border border-white/10 text-brand-white/50">SEO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 4: PROCESO DE TRABAJO                -->
+<!-- ============================================ -->
+<section id="proceso" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-brand-purple/5 to-transparent">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Cómo trabajamos</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Nuestro Proceso</h2>
+      <p class="text-brand-white/60 mt-4 max-w-2xl mx-auto text-lg">Metodología probada que garantiza entregas a tiempo, con calidad superior y comunicación constante.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 stagger-children">
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">01</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">search</span>
+        <h4 class="font-display font-bold mb-2">Descubrimiento</h4>
+        <p class="text-sm text-brand-white/50">Analizamos tus necesidades, competencia y objetivos de negocio.</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">02</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">draw</span>
+        <h4 class="font-display font-bold mb-2">Diseño</h4>
+        <p class="text-sm text-brand-white/50">Creamos wireframes y diseños visuales alineados a tu marca.</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">03</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">terminal</span>
+        <h4 class="font-display font-bold mb-2">Desarrollo</h4>
+        <p class="text-sm text-brand-white/50">Código limpio con las mejores tecnologías del ecosistema.</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">04</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">bug_report</span>
+        <h4 class="font-display font-bold mb-2">Testing</h4>
+        <p class="text-sm text-brand-white/50">QA riguroso en todos los dispositivos y navegadores.</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">05</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">rocket_launch</span>
+        <h4 class="font-display font-bold mb-2">Lanzamiento</h4>
+        <p class="text-sm text-brand-white/50">Deploy profesional con monitoreo y optimización post-lanzamiento.</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal">
+        <div class="text-4xl font-display font-bold text-brand-celeste/30 mb-3">06</div>
+        <span class="material-symbols-outlined text-brand-celeste text-3xl mb-3">handshake</span>
+        <h4 class="font-display font-bold mb-2">Soporte</h4>
+        <p class="text-sm text-brand-white/50">Mantenimiento continuo y mejoras iterativas para tu crecimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 5: PORTAFOLIO / CASOS DE ÉXITO       -->
+<!-- ============================================ -->
+<section id="portafolio" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Nuestro trabajo</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Casos de Éxito</h2>
+      <p class="text-brand-white/60 mt-4 max-w-2xl mx-auto text-lg">Cada proyecto es una oportunidad de superar expectativas. Estos son algunos resultados que hablan por sí solos.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
+      <!-- Project 1 -->
+      <div class="project-card glass-card rounded-xl overflow-hidden group scroll-reveal cursor-pointer">
+        <div class="relative h-64 md:h-72 bg-gradient-to-br from-brand-purple/30 to-brand-celeste/20 overflow-hidden">
+          <div class="project-img w-full h-full bg-gradient-to-br from-brand-navy to-brand-purple/40 flex items-center justify-center">
+            <span class="material-symbols-outlined text-7xl text-brand-white/10">storefront</span>
+          </div>
+          <div class="project-overlay absolute inset-0 bg-brand-black/70 flex items-center justify-center">
+            <span class="bg-brand-celeste text-white font-bold px-6 py-3 rounded-lg text-sm">Ver Caso Completo →</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold uppercase tracking-widest text-brand-celeste">E-Commerce</span>
+            <span class="text-xs text-green-400 font-bold bg-green-400/10 px-3 py-1 rounded-full">+40% Conversión</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2">TechStore — Tienda Online Premium</h3>
+          <p class="text-sm text-brand-white/50 mb-4">Rediseño completo de la experiencia de compra con checkout optimizado y sistema de recomendaciones con IA.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Next.js</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Stripe</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Prisma</span>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card glass-card rounded-xl overflow-hidden group scroll-reveal cursor-pointer">
+        <div class="relative h-64 md:h-72 bg-gradient-to-br from-brand-celeste/20 to-brand-purple/30 overflow-hidden">
+          <div class="project-img w-full h-full bg-gradient-to-br from-brand-dark to-brand-celeste/20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-7xl text-brand-white/10">dashboard</span>
+          </div>
+          <div class="project-overlay absolute inset-0 bg-brand-black/70 flex items-center justify-center">
+            <span class="bg-brand-celeste text-white font-bold px-6 py-3 rounded-lg text-sm">Ver Caso Completo →</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold uppercase tracking-widest text-brand-celeste">SaaS Dashboard</span>
+            <span class="text-xs text-green-400 font-bold bg-green-400/10 px-3 py-1 rounded-full">-60% Tiempo de Carga</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2">FinDash — Panel Financiero en Tiempo Real</h3>
+          <p class="text-sm text-brand-white/50 mb-4">Plataforma analítica con gráficos interactivos, alertas inteligentes y reportería automatizada para equipos financieros.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">React</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">D3.js</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-card glass-card rounded-xl overflow-hidden group scroll-reveal cursor-pointer">
+        <div class="relative h-64 md:h-72 bg-gradient-to-br from-green-500/10 to-brand-navy overflow-hidden">
+          <div class="project-img w-full h-full bg-gradient-to-br from-brand-navy to-green-900/30 flex items-center justify-center">
+            <span class="material-symbols-outlined text-7xl text-brand-white/10">local_hospital</span>
+          </div>
+          <div class="project-overlay absolute inset-0 bg-brand-black/70 flex items-center justify-center">
+            <span class="bg-brand-celeste text-white font-bold px-6 py-3 rounded-lg text-sm">Ver Caso Completo →</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold uppercase tracking-widest text-brand-celeste">App Móvil</span>
+            <span class="text-xs text-green-400 font-bold bg-green-400/10 px-3 py-1 rounded-full">50K+ Descargas</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2">MediConnect — Telemedicina</h3>
+          <p class="text-sm text-brand-white/50 mb-4">App de consultas médicas online con videollamadas, recetas digitales e integración con seguros de salud.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">React Native</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Firebase</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">WebRTC</span>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card glass-card rounded-xl overflow-hidden group scroll-reveal cursor-pointer">
+        <div class="relative h-64 md:h-72 bg-gradient-to-br from-orange-500/10 to-brand-navy overflow-hidden">
+          <div class="project-img w-full h-full bg-gradient-to-br from-brand-navy to-orange-900/20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-7xl text-brand-white/10">restaurant</span>
+          </div>
+          <div class="project-overlay absolute inset-0 bg-brand-black/70 flex items-center justify-center">
+            <span class="bg-brand-celeste text-white font-bold px-6 py-3 rounded-lg text-sm">Ver Caso Completo →</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold uppercase tracking-widest text-brand-celeste">Landing + SEO</span>
+            <span class="text-xs text-green-400 font-bold bg-green-400/10 px-3 py-1 rounded-full">+200% Tráfico Orgánico</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2">Sabores del Sur — Cadena Gastronómica</h3>
+          <p class="text-sm text-brand-white/50 mb-4">Sitio web multi-sucursal con reservas online, menú dinámico y estrategia SEO local que triplicó las visitas.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Astro</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Tailwind</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-brand-white/5 text-brand-white/40">Google SEO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 6: STACK TECNOLÓGICO                 -->
+<!-- ============================================ -->
+<section id="stack" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-brand-purple/5 to-transparent">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Herramientas</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Stack Tecnológico</h2>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 stagger-children">
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">⚛️</div><span class="text-xs text-brand-white/50">React</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">▲</div><span class="text-xs text-brand-white/50">Next.js</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🟢</div><span class="text-xs text-brand-white/50">Node.js</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🔷</div><span class="text-xs text-brand-white/50">TypeScript</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🐍</div><span class="text-xs text-brand-white/50">Python</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🎨</div><span class="text-xs text-brand-white/50">Tailwind</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🗄️</div><span class="text-xs text-brand-white/50">PostgreSQL</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">☁️</div><span class="text-xs text-brand-white/50">AWS</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🐳</div><span class="text-xs text-brand-white/50">Docker</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🔥</div><span class="text-xs text-brand-white/50">Firebase</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">📱</div><span class="text-xs text-brand-white/50">React Native</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🎯</div><span class="text-xs text-brand-white/50">Figma</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🔗</div><span class="text-xs text-brand-white/50">GraphQL</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🧪</div><span class="text-xs text-brand-white/50">Jest</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">▶️</div><span class="text-xs text-brand-white/50">Vercel</span></div>
+      <div class="glass-card rounded-xl p-4 text-center scroll-reveal hover:border-brand-celeste/40 transition-colors"><div class="text-2xl mb-2">🔐</div><span class="text-xs text-brand-white/50">Auth0</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 7: TESTIMONIOS                       -->
+<!-- ============================================ -->
+<section id="testimonios" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Lo que dicen</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Testimonios</h2>
+    </div>
+
+    <div class="relative overflow-hidden">
+      <div id="testimonial-track" class="testimonial-track flex w-full">
+        <!-- Testimonial 1 -->
+        <div class="w-full flex-shrink-0 px-4">
+          <div class="glass-card rounded-xl p-8 md:p-12 max-w-3xl mx-auto text-center glow-purple">
+            <div class="text-brand-celeste text-5xl font-serif mb-6">"</div>
+            <p class="text-lg md:text-xl text-brand-white/80 leading-relaxed mb-8">Digital Union transformó completamente nuestra presencia online. Las ventas crecieron un 40% en los primeros 3 meses. Su nivel de profesionalismo y atención al detalle es incomparable.</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-purple to-brand-celeste flex items-center justify-center font-bold text-lg">CM</div>
+              <div class="text-left">
+                <p class="font-bold">Carlos Mendoza</p>
+                <p class="text-sm text-brand-white/50">CEO, TechStore</p>
+              </div>
+            </div>
+            <div class="flex justify-center gap-1 mt-4">
+              <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="w-full flex-shrink-0 px-4">
+          <div class="glass-card rounded-xl p-8 md:p-12 max-w-3xl mx-auto text-center glow-celeste">
+            <div class="text-brand-celeste text-5xl font-serif mb-6">"</div>
+            <p class="text-lg md:text-xl text-brand-white/80 leading-relaxed mb-8">El equipo entendió nuestra visión desde el día uno. La app que nos desarrollaron tiene más de 50 mil descargas y una calificación de 4.8 estrellas. Absolutamente élite.</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-celeste to-green-400 flex items-center justify-center font-bold text-lg">LP</div>
+              <div class="text-left">
+                <p class="font-bold">Laura Pérez</p>
+                <p class="text-sm text-brand-white/50">CTO, MediConnect</p>
+              </div>
+            </div>
+            <div class="flex justify-center gap-1 mt-4">
+              <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="w-full flex-shrink-0 px-4">
+          <div class="glass-card rounded-xl p-8 md:p-12 max-w-3xl mx-auto text-center glow-purple">
+            <div class="text-brand-celeste text-5xl font-serif mb-6">"</div>
+            <p class="text-lg md:text-xl text-brand-white/80 leading-relaxed mb-8">Contratamos a Digital Union para nuestro rediseño web y la estrategia SEO. En 6 meses, triplicamos el tráfico orgánico. Inversión que se paga sola.</p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center font-bold text-lg">RV</div>
+              <div class="text-left">
+                <p class="font-bold">Roberto Vidal</p>
+                <p class="text-sm text-brand-white/50">Gerente, Sabores del Sur</p>
+              </div>
+            </div>
+            <div class="flex justify-center gap-1 mt-4">
+              <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="flex justify-center items-center gap-4 mt-8">
+        <button id="testimonial-prev" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors">
+          <span class="material-symbols-outlined text-xl">chevron_left</span>
+        </button>
+        <div class="flex gap-2">
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-brand-celeste transition-colors"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-brand-white/30 transition-colors"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-brand-white/30 transition-colors"></button>
+        </div>
+        <button id="testimonial-next" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors">
+          <span class="material-symbols-outlined text-xl">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 8: ESTADÍSTICAS                      -->
+<!-- ============================================ -->
+<section class="py-24 md:py-32 bg-gradient-to-r from-brand-purple/10 via-brand-dark to-brand-celeste/10">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      <div class="text-center scroll-reveal">
+        <p class="stat-number font-display font-extrabold text-5xl md:text-6xl text-brand-celeste" data-target="85" data-suffix="+">0</p>
+        <p class="text-brand-white/50 mt-2 text-sm uppercase tracking-widest">Proyectos</p>
+      </div>
+      <div class="text-center scroll-reveal">
+        <p class="stat-number font-display font-extrabold text-5xl md:text-6xl text-brand-celeste" data-target="5" data-suffix=" Años">0</p>
+        <p class="text-brand-white/50 mt-2 text-sm uppercase tracking-widest">Experiencia</p>
+      </div>
+      <div class="text-center scroll-reveal">
+        <p class="stat-number font-display font-extrabold text-5xl md:text-6xl text-brand-celeste" data-target="98" data-suffix="%">0</p>
+        <p class="text-brand-white/50 mt-2 text-sm uppercase tracking-widest">Clientes Satisfechos</p>
+      </div>
+      <div class="text-center scroll-reveal">
+        <p class="stat-number font-display font-extrabold text-5xl md:text-6xl text-brand-celeste" data-prefix="<" data-target="24" data-suffix="h">0</p>
+        <p class="text-brand-white/50 mt-2 text-sm uppercase tracking-widest">Tiempo de Respuesta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 9: PLANES / PRECIOS                  -->
+<!-- ============================================ -->
+<section id="planes" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Inversión</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Planes a tu Medida</h2>
+      <p class="text-brand-white/60 mt-4 max-w-2xl mx-auto text-lg">Soluciones escalables que se adaptan a tu presupuesto y ambición.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
+      <!-- Plan Starter -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal flex flex-col">
+        <h3 class="font-display font-bold text-xl mb-2">Starter</h3>
+        <p class="text-sm text-brand-white/50 mb-6">Ideal para emprendedores y proyectos nuevos.</p>
+        <div class="mb-6"><span class="font-display font-extrabold text-4xl">Desde $499</span><span class="text-brand-white/40 text-sm"> USD</span></div>
+        <ul class="space-y-3 mb-8 flex-grow">
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Landing page responsive</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Hasta 5 secciones</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> SEO básico</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Formulario de contacto</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> 1 mes de soporte</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-brand-white/20 hover:border-brand-celeste text-brand-white font-bold py-3 rounded-lg transition-colors">Solicitar Cotización</a>
+      </div>
+      <!-- Plan Pro (Highlighted) -->
+      <div class="plan-highlight rounded-xl scroll-reveal flex flex-col">
+        <div class="glass-card rounded-xl p-8 bg-brand-purple/10 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-display font-bold text-xl">Profesional</h3>
+            <span class="text-xs font-bold bg-brand-celeste text-white px-3 py-1 rounded-full">POPULAR</span>
+          </div>
+          <p class="text-sm text-brand-white/50 mb-6">Para empresas que buscan crecer con fuerza.</p>
+          <div class="mb-6"><span class="font-display font-extrabold text-4xl">Desde $1,499</span><span class="text-brand-white/40 text-sm"> USD</span></div>
+          <ul class="space-y-3 mb-8 flex-grow">
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Sitio web completo (hasta 15 páginas)</li>
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Diseño UX/UI personalizado</li>
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> CMS administrable</li>
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> SEO avanzado + Analytics</li>
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Integraciones (CRM, email, pagos)</li>
+            <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> 3 meses de soporte</li>
+          </ul>
+          <a href="#contacto" class="block text-center bg-brand-celeste hover:bg-brand-celeste/90 text-white font-bold py-3 rounded-lg transition-colors">Solicitar Cotización</a>
+        </div>
+      </div>
+      <!-- Plan Enterprise -->
+      <div class="glass-card rounded-xl p-8 scroll-reveal flex flex-col">
+        <h3 class="font-display font-bold text-xl mb-2">Enterprise</h3>
+        <p class="text-sm text-brand-white/50 mb-6">Soluciones a medida para grandes operaciones.</p>
+        <div class="mb-6"><span class="font-display font-extrabold text-4xl">Custom</span><span class="text-brand-white/40 text-sm"> /proyecto</span></div>
+        <ul class="space-y-3 mb-8 flex-grow">
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Desarrollo full-stack a medida</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> App móvil nativa/multiplataforma</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Arquitectura cloud escalable</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Equipo dedicado</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> SLA con soporte 24/7</li>
+          <li class="flex items-center gap-2 text-sm text-brand-white/60"><span class="material-symbols-outlined text-green-400 text-lg">check_circle</span> Soporte continuo ilimitado</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-brand-white/20 hover:border-brand-celeste text-brand-white font-bold py-3 rounded-lg transition-colors">Agendar Reunión</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 10: EQUIPO                           -->
+<!-- ============================================ -->
+<section id="equipo" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-brand-purple/5 to-transparent">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Quiénes somos</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Nuestro Equipo</h2>
+      <p class="text-brand-white/60 mt-4 max-w-2xl mx-auto text-lg">Profesionales apasionados por la tecnología y comprometidos con la excelencia.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal group">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-brand-purple to-brand-celeste mx-auto mb-4 flex items-center justify-center text-3xl font-bold group-hover:scale-110 transition-transform">MR</div>
+        <h4 class="font-display font-bold text-lg">Matías Rodríguez</h4>
+        <p class="text-sm text-brand-celeste mb-2">CEO & Lead Developer</p>
+        <p class="text-xs text-brand-white/40">Full-stack · 8 años de experiencia</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal group">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-brand-celeste to-green-400 mx-auto mb-4 flex items-center justify-center text-3xl font-bold group-hover:scale-110 transition-transform">VS</div>
+        <h4 class="font-display font-bold text-lg">Valentina Silva</h4>
+        <p class="text-sm text-brand-celeste mb-2">Head of Design</p>
+        <p class="text-xs text-brand-white/40">UX/UI · Branding · Motion</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal group">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-orange-400 to-red-500 mx-auto mb-4 flex items-center justify-center text-3xl font-bold group-hover:scale-110 transition-transform">DA</div>
+        <h4 class="font-display font-bold text-lg">Diego Arias</h4>
+        <p class="text-sm text-brand-celeste mb-2">Backend Architect</p>
+        <p class="text-xs text-brand-white/40">Node.js · AWS · DevOps</p>
+      </div>
+      <div class="glass-card rounded-xl p-6 text-center scroll-reveal group">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-pink-500 to-brand-purple mx-auto mb-4 flex items-center justify-center text-3xl font-bold group-hover:scale-110 transition-transform">CF</div>
+        <h4 class="font-display font-bold text-lg">Camila Fuentes</h4>
+        <p class="text-sm text-brand-celeste mb-2">Project Manager</p>
+        <p class="text-xs text-brand-white/40">Scrum · Comunicación · QA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 11: BLOG / RECURSOS                  -->
+<!-- ============================================ -->
+<section id="blog" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Conocimiento</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Blog & Recursos</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
+      <article class="glass-card rounded-xl overflow-hidden scroll-reveal group cursor-pointer">
+        <div class="h-48 bg-gradient-to-br from-brand-purple/30 to-brand-celeste/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-5xl text-brand-white/20 group-hover:scale-110 transition-transform">speed</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-brand-celeste font-semibold uppercase tracking-widest">Performance</span>
+          <h3 class="font-display font-bold text-lg mt-2 mb-2 group-hover:text-brand-celeste transition-colors">Cómo Lograr 100 en Lighthouse: Guía Definitiva 2024</h3>
+          <p class="text-sm text-brand-white/50">Estrategias avanzadas para optimizar Core Web Vitals y dominar el ranking de Google.</p>
+          <span class="text-sm text-brand-celeste mt-4 inline-block">Leer artículo →</span>
+        </div>
+      </article>
+      <article class="glass-card rounded-xl overflow-hidden scroll-reveal group cursor-pointer">
+        <div class="h-48 bg-gradient-to-br from-brand-celeste/20 to-green-500/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-5xl text-brand-white/20 group-hover:scale-110 transition-transform">conversion_path</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-brand-celeste font-semibold uppercase tracking-widest">Conversión</span>
+          <h3 class="font-display font-bold text-lg mt-2 mb-2 group-hover:text-brand-celeste transition-colors">5 Principios de UX que Duplican tus Ventas Online</h3>
+          <p class="text-sm text-brand-white/50">Caso de estudio real de cómo un rediseño estratégico aumentó la conversión un 127%.</p>
+          <span class="text-sm text-brand-celeste mt-4 inline-block">Leer artículo →</span>
+        </div>
+      </article>
+      <article class="glass-card rounded-xl overflow-hidden scroll-reveal group cursor-pointer">
+        <div class="h-48 bg-gradient-to-br from-orange-500/20 to-brand-purple/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-5xl text-brand-white/20 group-hover:scale-110 transition-transform">robot_2</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs text-brand-celeste font-semibold uppercase tracking-widest">Tendencias</span>
+          <h3 class="font-display font-bold text-lg mt-2 mb-2 group-hover:text-brand-celeste transition-colors">IA Generativa en el Desarrollo Web: Lo que Viene en 2025</h3>
+          <p class="text-sm text-brand-white/50">Cómo estamos integrando inteligencia artificial para acelerar entregas y personalizar experiencias.</p>
+          <span class="text-sm text-brand-celeste mt-4 inline-block">Leer artículo →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 12: FAQ                              -->
+<!-- ============================================ -->
+<section id="faq" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-brand-purple/5 to-transparent">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16 scroll-reveal">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Dudas</span>
+      <h2 class="font-display font-bold text-4xl md:text-5xl mt-4">Preguntas Frecuentes</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4 stagger-children">
+      <div class="faq-item glass-card rounded-xl overflow-hidden scroll-reveal">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display font-bold text-lg pr-4">¿Cuánto tiempo toma un proyecto web completo?</span>
+          <span class="material-symbols-outlined faq-icon text-brand-celeste text-2xl shrink-0">add</span>
+        </button>
+        <div class="faq-answer text-brand-white/60 leading-relaxed">
+          Depende de la complejidad. Una landing page puede estar lista en 1-2 semanas. Un sitio completo con CMS toma entre 4-8 semanas. Proyectos enterprise con funcionalidades custom pueden tomar 2-4 meses. Siempre damos un timeline detallado antes de arrancar.
+        </div>
+      </div>
+      <div class="faq-item glass-card rounded-xl overflow-hidden scroll-reveal">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display font-bold text-lg pr-4">¿Qué tecnologías utilizan?</span>
+          <span class="material-symbols-outlined faq-icon text-brand-celeste text-2xl shrink-0">add</span>
+        </button>
+        <div class="faq-answer text-brand-white/60 leading-relaxed">
+          Trabajamos con el stack más moderno del mercado: React, Next.js, Node.js, TypeScript, PostgreSQL, Prisma, Tailwind CSS, AWS y Vercel. Elegimos la herramienta correcta para cada proyecto, nunca al revés.
+        </div>
+      </div>
+      <div class="faq-item glass-card rounded-xl overflow-hidden scroll-reveal">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display font-bold text-lg pr-4">¿Ofrecen soporte post-entrega?</span>
+          <span class="material-symbols-outlined faq-icon text-brand-celeste text-2xl shrink-0">add</span>
+        </button>
+        <div class="faq-answer text-brand-white/60 leading-relaxed">
+          Sí, todos nuestros planes incluyen soporte post-lanzamiento. El plan Starter incluye 1 mes, el Profesional 3 meses, y el Enterprise soporte continuo ilimitado con SLA. También ofrecemos planes de mantenimiento mensual.
+        </div>
+      </div>
+      <div class="faq-item glass-card rounded-xl overflow-hidden scroll-reveal">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display font-bold text-lg pr-4">¿Cómo es el proceso de pago?</span>
+          <span class="material-symbols-outlined faq-icon text-brand-celeste text-2xl shrink-0">add</span>
+        </button>
+        <div class="faq-answer text-brand-white/60 leading-relaxed">
+          Trabajamos con un esquema de 50% al inicio y 50% contra entrega. Para proyectos enterprise, podemos establecer pagos por hitos. Aceptamos transferencia bancaria, tarjeta de crédito y criptomonedas.
+        </div>
+      </div>
+      <div class="faq-item glass-card rounded-xl overflow-hidden scroll-reveal">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display font-bold text-lg pr-4">¿Pueden trabajar con clientes internacionales?</span>
+          <span class="material-symbols-outlined faq-icon text-brand-celeste text-2xl shrink-0">add</span>
+        </button>
+        <div class="faq-answer text-brand-white/60 leading-relaxed">
+          Absolutamente. Trabajamos con empresas de toda Latinoamérica, Estados Unidos y Europa. Nos adaptamos a diferentes zonas horarias y usamos herramientas de colaboración remota como Slack, Notion y Figma.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 13: CONTACTO                         -->
+<!-- ============================================ -->
+<section id="contacto" class="py-24 md:py-32 relative">
+  <div class="orb orb-celeste w-[400px] h-[400px] -bottom-40 -right-40"></div>
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Left: Info -->
+      <div class="scroll-reveal-left">
+        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-celeste">Hablemos</span>
+        <h2 class="font-display font-bold text-4xl md:text-5xl mt-4 mb-6">¿Listo para llevar tu proyecto al siguiente nivel?</h2>
+        <p class="text-brand-white/60 text-lg mb-10 leading-relaxed">Cuéntanos tu idea y te respondemos en menos de 24 horas con una propuesta personalizada. Sin compromiso.</p>
+
+        <div class="space-y-6">
+          <a href="mailto:hola@digitalunion.dev" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-lg bg-brand-celeste/10 flex items-center justify-center group-hover:bg-brand-celeste/20 transition-colors">
+              <span class="material-symbols-outlined text-brand-celeste">mail</span>
+            </div>
+            <div>
+              <p class="text-sm text-brand-white/40">Email</p>
+              <p class="font-semibold group-hover:text-brand-celeste transition-colors">hola@digitalunion.dev</p>
+            </div>
+          </a>
+          <a href="https://wa.me/56912345678" target="_blank" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+              <span class="material-symbols-outlined text-green-400">chat</span>
+            </div>
+            <div>
+              <p class="text-sm text-brand-white/40">WhatsApp</p>
+              <p class="font-semibold group-hover:text-green-400 transition-colors">+56 9 1234 5678</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-brand-purple/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-brand-purple">location_on</span>
+            </div>
+            <div>
+              <p class="text-sm text-brand-white/40">Ubicación</p>
+              <p class="font-semibold">Remoto — Latinoamérica & Global</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex gap-4 mt-10">
+          <a href="#" class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-sm font-bold">in</a>
+          <a href="#" class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-sm font-bold">IG</a>
+          <a href="#" class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-sm font-bold">GH</a>
+          <a href="#" class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-sm font-bold">X</a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="scroll-reveal-right">
+        <form class="glass-card rounded-xl p-8 space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-brand-white/70">Nombre</label>
+              <input type="text" placeholder="Tu nombre" class="w-full bg-brand-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-celeste transition-colors placeholder:text-brand-white/20" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-brand-white/70">Email</label>
+              <input type="email" placeholder="tu@email.com" class="w-full bg-brand-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-celeste transition-colors placeholder:text-brand-white/20" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-brand-white/70">Tipo de proyecto</label>
+            <select class="w-full bg-brand-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-celeste transition-colors text-brand-white/60">
+              <option>Sitio Web</option>
+              <option>E-Commerce</option>
+              <option>App Móvil</option>
+              <option>Rediseño / UX</option>
+              <option>SEO / Marketing</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-brand-white/70">Presupuesto estimado</label>
+            <select class="w-full bg-brand-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-celeste transition-colors text-brand-white/60">
+              <option>Menos de $1,000 USD</option>
+              <option>$1,000 — $5,000 USD</option>
+              <option>$5,000 — $15,000 USD</option>
+              <option>Más de $15,000 USD</option>
+              <option>No estoy seguro</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-brand-white/70">Cuéntanos tu proyecto</label>
+            <textarea rows="4" placeholder="Describe brevemente qué necesitas..." class="w-full bg-brand-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-celeste transition-colors placeholder:text-brand-white/20 resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-brand-celeste hover:bg-brand-celeste/90 text-white font-bold py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-brand-celeste/25 flex items-center justify-center gap-2">
+            Enviar Mensaje
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- SECTION 14: FOOTER                           -->
+<!-- ============================================ -->
+<footer class="border-t border-white/5 pt-16 pb-8">
+  <div class="max-w-container mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1: Brand -->
+      <div>
+        <a href="#" class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-brand-celeste text-2xl">hub</span>
+          <span class="font-display font-bold text-xl">DIGITAL<span class="text-brand-celeste">UNION</span></span>
+        </a>
+        <p class="text-sm text-brand-white/40 leading-relaxed mb-6">Agencia élite de desarrollo web y soluciones digitales de alto rendimiento.</p>
+        <!-- Newsletter -->
+        <div class="flex">
+          <input type="email" placeholder="tu@email.com" class="flex-1 bg-brand-white/5 border border-white/10 border-r-0 rounded-l-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-celeste placeholder:text-brand-white/20" />
+          <button class="bg-brand-celeste px-4 rounded-r-lg hover:bg-brand-celeste/90 transition-colors">
+            <span class="material-symbols-outlined text-white text-xl">send</span>
+          </button>
+        </div>
+      </div>
+      <!-- Col 2: Servicios -->
+      <div>
+        <h4 class="font-display font-bold text-sm uppercase tracking-widest mb-4">Servicios</h4>
+        <ul class="space-y-2.5 text-sm text-brand-white/40">
+          <li><a href="#servicios" class="hover:text-brand-celeste transition-colors">Desarrollo Web</a></li>
+          <li><a href="#servicios" class="hover:text-brand-celeste transition-colors">Diseño UX/UI</a></li>
+          <li><a href="#servicios" class="hover:text-brand-celeste transition-colors">E-Commerce</a></li>
+          <li><a href="#servicios" class="hover:text-brand-celeste transition-colors">Apps Móviles</a></li>
+          <li><a href="#servicios" class="hover:text-brand-celeste transition-colors">SEO & Marketing</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Empresa -->
+      <div>
+        <h4 class="font-display font-bold text-sm uppercase tracking-widest mb-4">Empresa</h4>
+        <ul class="space-y-2.5 text-sm text-brand-white/40">
+          <li><a href="#portafolio" class="hover:text-brand-celeste transition-colors">Portafolio</a></li>
+          <li><a href="#equipo" class="hover:text-brand-celeste transition-colors">Equipo</a></li>
+          <li><a href="#blog" class="hover:text-brand-celeste transition-colors">Blog</a></li>
+          <li><a href="#faq" class="hover:text-brand-celeste transition-colors">FAQ</a></li>
+          <li><a href="#contacto" class="hover:text-brand-celeste transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Legal -->
+      <div>
+        <h4 class="font-display font-bold text-sm uppercase tracking-widest mb-4">Legal</h4>
+        <ul class="space-y-2.5 text-sm text-brand-white/40">
+          <li><a href="#" class="hover:text-brand-celeste transition-colors">Términos de Servicio</a></li>
+          <li><a href="#" class="hover:text-brand-celeste transition-colors">Política de Privacidad</a></li>
+          <li><a href="#" class="hover:text-brand-celeste transition-colors">Cookies</a></li>
+        </ul>
+        <div class="flex gap-3 mt-6">
+          <a href="#" class="w-9 h-9 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-xs font-bold">in</a>
+          <a href="#" class="w-9 h-9 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-xs font-bold">IG</a>
+          <a href="#" class="w-9 h-9 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-xs font-bold">GH</a>
+          <a href="#" class="w-9 h-9 rounded-lg border border-white/10 flex items-center justify-center hover:border-brand-celeste hover:text-brand-celeste transition-colors text-xs font-bold">X</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-brand-white/30">
+      <p>© 2024 Digital Union. Todos los derechos reservados.</p>
+      <p>Hecho con <span class="text-brand-celeste">♥</span> por Digital Union</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./js/main.js"></script>
+
+</body>
+</html>
