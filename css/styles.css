@@ -336,7 +336,7 @@ h1, h2, h3, h4, .font-display {
 
 /* TESTIMONIALS EDITORIAL */
 .testimonial-block {
-  padding: 6rem 0;
+  padding-top: 6rem; padding-bottom: 6rem;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   text-align: center;
@@ -465,7 +465,7 @@ h1, h2, h3, h4, .font-display {
 
 /* CONTACT & FOOTER */
 .contact-section {
-  padding: 8rem 0;
+  padding-top: 8rem; padding-bottom: 8rem;
   border-top: 1px solid var(--border-light);
 }
 .contact-grid {
@@ -499,7 +499,7 @@ h1, h2, h3, h4, .font-display {
 
 .footer {
   border-top: 1px solid var(--border-light);
-  padding: 4rem 0;
+  padding-top: 4rem; padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
